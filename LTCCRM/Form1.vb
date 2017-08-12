@@ -5,17 +5,9 @@ Public Class Form1
         'Hard coded test insert do not use
         'CRMDATATableAdapter.Insert("Matthew", "Sessions", 139847, "08112017", "Cash", "08112017")
 
+        AddCustomer()
 
 
-        'TODO: add insert in a different method after all field validation has been performed
-        CRMDATATableAdapter.Insert(
-                     T_FIRST_NAMETextBox.Text,
-                     T_LAST_NAMETextBox.Text,
-                     U_LAST_RECEIPTTextBox.Text,
-                     D_LAST_PURCHASEDTextBox.Text,
-                     T_PAY_METHTextBox.Text,
-                     D_START_DATETextBox.Text
-                     )
     End Sub
 
     Private Sub CRMDATABindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
@@ -38,5 +30,28 @@ Public Class Form1
         U_USERTextBox.Text = CRMDATATableAdapter.SelectMaxUserID() + 1
         D_LAST_PURCHASEDTextBox.Text = todaysDate
         D_START_DATETextBox.Text = todaysDate
+    End Sub
+
+    Private Sub AddCustomer()
+
+        CRMDATATableAdapter.Insert(
+                     T_FIRST_NAMETextBox.Text,
+                     T_LAST_NAMETextBox.Text,
+                     U_LAST_RECEIPTTextBox.Text,
+                     D_LAST_PURCHASEDTextBox.Text,
+                     T_PAY_METHTextBox.Text,
+                     D_START_DATETextBox.Text
+                     )
+
+        ClearFields()
+    End Sub
+
+    Private Sub ClearFields()
+        T_FIRST_NAMETextBox.Text = String.Empty
+        T_LAST_NAMETextBox.Text = String.Empty
+        U_LAST_RECEIPTTextBox.Text = String.Empty
+        T_PAY_METHTextBox.SelectedIndex = -1
+
+        PreFillFields()
     End Sub
 End Class
