@@ -30,7 +30,7 @@ Partial Class Form1
         Dim D_LAST_PURCHASEDLabel As System.Windows.Forms.Label
         Dim T_PAY_METHLabel As System.Windows.Forms.Label
         Dim D_START_DATELabel As System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAddCustomer = New System.Windows.Forms.Button()
         Me.CRMDataSet = New LTCCRM.CRMDataSet()
         Me.CRMDATABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDATATableAdapter = New LTCCRM.CRMDataSetTableAdapters.CRMDATATableAdapter()
@@ -42,6 +42,7 @@ Partial Class Form1
         Me.D_LAST_PURCHASEDTextBox = New System.Windows.Forms.TextBox()
         Me.D_START_DATETextBox = New System.Windows.Forms.TextBox()
         Me.T_PAY_METHTextBox = New System.Windows.Forms.ComboBox()
+        Me.btnClear = New System.Windows.Forms.Button()
         U_USERLabel = New System.Windows.Forms.Label()
         T_FIRST_NAMELabel = New System.Windows.Forms.Label()
         T_LAST_NAMELabel = New System.Windows.Forms.Label()
@@ -116,14 +117,14 @@ Partial Class Form1
         D_START_DATELabel.TabIndex = 28
         D_START_DATELabel.Text = "Customer Join Date:"
         '
-        'Button1
+        'btnAddCustomer
         '
-        Me.Button1.Location = New System.Drawing.Point(148, 219)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Add Customer"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAddCustomer.Location = New System.Drawing.Point(220, 238)
+        Me.btnAddCustomer.Name = "btnAddCustomer"
+        Me.btnAddCustomer.Size = New System.Drawing.Size(88, 23)
+        Me.btnAddCustomer.TabIndex = 15
+        Me.btnAddCustomer.Text = "Add Customer"
+        Me.btnAddCustomer.UseVisualStyleBackColor = True
         '
         'CRMDataSet
         '
@@ -205,11 +206,21 @@ Partial Class Form1
         Me.T_PAY_METHTextBox.Size = New System.Drawing.Size(100, 21)
         Me.T_PAY_METHTextBox.TabIndex = 30
         '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(126, 238)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(88, 23)
+        Me.btnClear.TabIndex = 31
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(320, 273)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.T_PAY_METHTextBox)
         Me.Controls.Add(U_USERLabel)
         Me.Controls.Add(Me.U_USERTextBox)
@@ -224,7 +235,7 @@ Partial Class Form1
         Me.Controls.Add(T_PAY_METHLabel)
         Me.Controls.Add(D_START_DATELabel)
         Me.Controls.Add(Me.D_START_DATETextBox)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAddCustomer)
         Me.Name = "Form1"
         Me.Text = "Learning Team C CRM"
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -233,7 +244,7 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnAddCustomer As System.Windows.Forms.Button
     Friend WithEvents CRMDataSet As LTCCRM.CRMDataSet
     Friend WithEvents CRMDATABindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CRMDATATableAdapter As LTCCRM.CRMDataSetTableAdapters.CRMDATATableAdapter
@@ -245,5 +256,6 @@ Partial Class Form1
     Friend WithEvents D_LAST_PURCHASEDTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_START_DATETextBox As System.Windows.Forms.TextBox
     Friend WithEvents T_PAY_METHTextBox As System.Windows.Forms.ComboBox
+    Friend WithEvents btnClear As System.Windows.Forms.Button
 
 End Class

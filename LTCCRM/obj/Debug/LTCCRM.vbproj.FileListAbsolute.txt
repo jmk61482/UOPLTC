@@ -18,3 +18,6 @@ C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\bin\Debug\LTCCRM.xml
 C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.Form1.resources
 C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.Resources.resources
 C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.vbproj.GenerateResource.Cache
+C:\Users\matts.MRSESSIONSMAIN\Source\Repos\UOPLTC\LTCCRM\bin\Debug\LTCCRM.exe.config
+C:\Users\matts.MRSESSIONSMAIN\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.exe
+C:\Users\matts.MRSESSIONSMAIN\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.xml

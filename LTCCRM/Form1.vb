@@ -10,7 +10,7 @@ Public Class Form1
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
         'Hard coded test insert do not use
         'CRMDATATableAdapter.Insert("Matthew", "Sessions", 139847, "08112017", "Cash", "08112017")
 
@@ -75,5 +75,15 @@ Public Class Form1
 
         PreFillFields()
 
+    End Sub
+
+    ''' <summary>
+    ''' On Clear button click call ClearFields() method
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        ClearFields()
     End Sub
 End Class
