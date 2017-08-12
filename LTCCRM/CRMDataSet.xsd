@@ -77,7 +77,16 @@ SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PA
               <Mapping SourceColumn="T_PAY_METH" DataSetColumn="T_PAY_METH" />
               <Mapping SourceColumn="D_START_DATE" DataSetColumn="D_START_DATE" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectMaxUserID" Modifier="Public" Name="SelectMaxUserID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SelectMaxUserID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT MAX(U_USER) FROM dbo.CRMDATA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -87,7 +96,7 @@ SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PA
   <xs:element name="CRMDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CRMDataSet" msprop:Generator_UserDSName="CRMDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CRMDATA" msprop:Generator_TableClassName="CRMDATADataTable" msprop:Generator_TableVarName="tableCRMDATA" msprop:Generator_TablePropName="CRMDATA" msprop:Generator_RowDeletingName="CRMDATARowDeleting" msprop:Generator_RowChangingName="CRMDATARowChanging" msprop:Generator_RowEvHandlerName="CRMDATARowChangeEventHandler" msprop:Generator_RowDeletedName="CRMDATARowDeleted" msprop:Generator_UserTableName="CRMDATA" msprop:Generator_RowChangedName="CRMDATARowChanged" msprop:Generator_RowEvArgName="CRMDATARowChangeEvent" msprop:Generator_RowClassName="CRMDATARow">
+        <xs:element name="CRMDATA" msprop:Generator_TableClassName="CRMDATADataTable" msprop:Generator_TableVarName="tableCRMDATA" msprop:Generator_RowChangedName="CRMDATARowChanged" msprop:Generator_TablePropName="CRMDATA" msprop:Generator_RowDeletingName="CRMDATARowDeleting" msprop:Generator_RowChangingName="CRMDATARowChanging" msprop:Generator_RowEvHandlerName="CRMDATARowChangeEventHandler" msprop:Generator_RowDeletedName="CRMDATARowDeleted" msprop:Generator_RowClassName="CRMDATARow" msprop:Generator_UserTableName="CRMDATA" msprop:Generator_RowEvArgName="CRMDATARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="U_USER" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnU_USER" msprop:Generator_ColumnPropNameInRow="U_USER" msprop:Generator_ColumnPropNameInTable="U_USERColumn" msprop:Generator_UserColumnName="U_USER" type="xs:int" />

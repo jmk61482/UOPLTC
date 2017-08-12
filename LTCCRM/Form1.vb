@@ -5,9 +5,10 @@ Public Class Form1
         'Hard coded test insert do not use
         'CRMDATATableAdapter.Insert("Matthew", "Sessions", 139847, "08112017", "Cash", "08112017")
 
-        Dim crmTA = CRMDATATableAdapter
 
-        crmTA.Insert(
+
+        'TODO: add insert in a different method after all field validation has been performed
+        CRMDATATableAdapter.Insert(
                      T_FIRST_NAMETextBox.Text,
                      T_LAST_NAMETextBox.Text,
                      U_LAST_RECEIPTTextBox.Text,
@@ -28,5 +29,14 @@ Public Class Form1
         'TODO: This line of code loads data into the 'CRMDataSet.CRMDATA' table. You can move, or remove it, as needed.
         'Me.CRMDATATableAdapter.Fill(Me.CRMDataSet.CRMDATA)
 
+        PreFillFields()
+
+    End Sub
+
+    Private Sub PreFillFields()
+        Dim todaysDate As String = String.Format("{0:MM/dd/yyyy}", DateTime.Now)
+        U_USERTextBox.Text = CRMDATATableAdapter.SelectMaxUserID() + 1
+        D_LAST_PURCHASEDTextBox.Text = todaysDate
+        D_START_DATETextBox.Text = todaysDate
     End Sub
 End Class

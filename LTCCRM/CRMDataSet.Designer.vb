@@ -963,239 +963,269 @@ Namespace CRMDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY"& _ 
+            Me._commandCollection(0).CommandText = "SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY" & _
                 "_METH, D_START_DATE FROM dbo.CRMDATA"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT MAX(U_USER) FROM dbo.CRMDATA"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As CRMDataSet.CRMDATADataTable) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, True)> _
+        Public Overridable Overloads Function Fill(ByVal dataTable As CRMDataSet.CRMDATADataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
+            If (Me.ClearBeforeFill = True) Then
+                dataTable.Clear()
             End If
             Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
             Return returnValue
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As CRMDataSet.CRMDATADataTable
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], True)> _
+        Public Overridable Overloads Function GetData() As CRMDataSet.CRMDATADataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As CRMDataSet.CRMDATADataTable = New CRMDataSet.CRMDATADataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As CRMDataSet.CRMDATADataTable) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function Update(ByVal dataTable As CRMDataSet.CRMDATADataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As CRMDataSet) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function Update(ByVal dataSet As CRMDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "CRMDATA")
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
             Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
             Return Me.Adapter.Update(dataRows)
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_U_USER,Integer)
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, True)> _
+        Public Overridable Overloads Function Delete(ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_U_USER, Integer)
             If (Original_T_FIRST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_FIRST_NAME")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T_FIRST_NAME,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T_FIRST_NAME, String)
             End If
             If (Original_T_LAST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_LAST_NAME")
             Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T_LAST_NAME,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T_LAST_NAME, String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_U_LAST_RECEIPT,Integer)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_U_LAST_RECEIPT, Integer)
             If (Original_D_LAST_PURCHASED Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_D_LAST_PURCHASED")
             Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_D_LAST_PURCHASED,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_D_LAST_PURCHASED, String)
             End If
             If (Original_T_PAY_METH Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_PAY_METH")
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_T_PAY_METH,String)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_T_PAY_METH, String)
             End If
             If (Original_D_START_DATE Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_D_START_DATE")
             Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_D_START_DATE,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_D_START_DATE, String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
+                Me.Adapter.DeleteCommand.Connection.Open()
             End If
-            Try 
+            Try
                 Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
+                    Me.Adapter.DeleteCommand.Connection.Close()
                 End If
             End Try
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, True)> _
+        Public Overridable Overloads Function Insert(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String) As Integer
             If (T_FIRST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_FIRST_NAME")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(T_FIRST_NAME,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(T_FIRST_NAME, String)
             End If
             If (T_LAST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_LAST_NAME")
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T_LAST_NAME,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T_LAST_NAME, String)
             End If
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(U_LAST_RECEIPT,Integer)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(U_LAST_RECEIPT, Integer)
             If (D_LAST_PURCHASED Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("D_LAST_PURCHASED")
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(D_LAST_PURCHASED,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(D_LAST_PURCHASED, String)
             End If
             If (T_PAY_METH Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_PAY_METH")
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T_PAY_METH,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T_PAY_METH, String)
             End If
             If (D_START_DATE Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("D_START_DATE")
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(D_START_DATE,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(D_START_DATE, String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
+                Me.Adapter.InsertCommand.Connection.Open()
             End If
-            Try 
+            Try
                 Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
+                    Me.Adapter.InsertCommand.Connection.Close()
                 End If
             End Try
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String, ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String, ByVal U_USER As Integer) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, True)> _
+        Public Overridable Overloads Function Update(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String, ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String, ByVal U_USER As Integer) As Integer
             If (T_FIRST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_FIRST_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(T_FIRST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(T_FIRST_NAME, String)
             End If
             If (T_LAST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_LAST_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T_LAST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T_LAST_NAME, String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(U_LAST_RECEIPT,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(U_LAST_RECEIPT, Integer)
             If (D_LAST_PURCHASED Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("D_LAST_PURCHASED")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(D_LAST_PURCHASED,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(D_LAST_PURCHASED, String)
             End If
             If (T_PAY_METH Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("T_PAY_METH")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T_PAY_METH,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T_PAY_METH, String)
             End If
             If (D_START_DATE Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("D_START_DATE")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(D_START_DATE,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(D_START_DATE, String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_U_USER,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_U_USER, Integer)
             If (Original_T_FIRST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_FIRST_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_T_FIRST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_T_FIRST_NAME, String)
             End If
             If (Original_T_LAST_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_LAST_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_T_LAST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_T_LAST_NAME, String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_U_LAST_RECEIPT,Integer)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_U_LAST_RECEIPT, Integer)
             If (Original_D_LAST_PURCHASED Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_D_LAST_PURCHASED")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_D_LAST_PURCHASED,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_D_LAST_PURCHASED, String)
             End If
             If (Original_T_PAY_METH Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_T_PAY_METH")
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_T_PAY_METH,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_T_PAY_METH, String)
             End If
             If (Original_D_START_DATE Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_D_START_DATE")
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_D_START_DATE,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_D_START_DATE, String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(U_USER,Integer)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(U_USER, Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
+                Me.Adapter.UpdateCommand.Connection.Open()
             End If
-            Try 
+            Try
                 Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
+                    Me.Adapter.UpdateCommand.Connection.Close()
                 End If
             End Try
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String, ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, True)> _
+        Public Overridable Overloads Function Update(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String, ByVal Original_U_USER As Integer, ByVal Original_T_FIRST_NAME As String, ByVal Original_T_LAST_NAME As String, ByVal Original_U_LAST_RECEIPT As Integer, ByVal Original_D_LAST_PURCHASED As String, ByVal Original_T_PAY_METH As String, ByVal Original_D_START_DATE As String) As Integer
             Return Me.Update(T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY_METH, D_START_DATE, Original_U_USER, Original_T_FIRST_NAME, Original_T_LAST_NAME, Original_U_LAST_RECEIPT, Original_D_LAST_PURCHASED, Original_T_PAY_METH, Original_D_START_DATE, Original_U_USER)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function SelectMaxUserID() As Object
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open()
+            End If
+            Dim returnValue As Object
+            Try
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close()
+                End If
+            End Try
+            If ((returnValue Is Nothing) _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue, Object)
+            End If
         End Function
     End Class
     

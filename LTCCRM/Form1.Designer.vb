@@ -53,6 +53,69 @@ Partial Class Form1
         CType(Me.CRMDATABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'U_USERLabel
+        '
+        U_USERLabel.AutoSize = True
+        U_USERLabel.Location = New System.Drawing.Point(12, 16)
+        U_USERLabel.Name = "U_USERLabel"
+        U_USERLabel.Size = New System.Drawing.Size(68, 13)
+        U_USERLabel.TabIndex = 16
+        U_USERLabel.Text = "Customer ID:"
+        '
+        'T_FIRST_NAMELabel
+        '
+        T_FIRST_NAMELabel.AutoSize = True
+        T_FIRST_NAMELabel.Location = New System.Drawing.Point(12, 42)
+        T_FIRST_NAMELabel.Name = "T_FIRST_NAMELabel"
+        T_FIRST_NAMELabel.Size = New System.Drawing.Size(60, 13)
+        T_FIRST_NAMELabel.TabIndex = 18
+        T_FIRST_NAMELabel.Text = "First Name:"
+        '
+        'T_LAST_NAMELabel
+        '
+        T_LAST_NAMELabel.AutoSize = True
+        T_LAST_NAMELabel.Location = New System.Drawing.Point(12, 68)
+        T_LAST_NAMELabel.Name = "T_LAST_NAMELabel"
+        T_LAST_NAMELabel.Size = New System.Drawing.Size(61, 13)
+        T_LAST_NAMELabel.TabIndex = 20
+        T_LAST_NAMELabel.Text = "Last Name:"
+        '
+        'U_LAST_RECEIPTLabel
+        '
+        U_LAST_RECEIPTLabel.AutoSize = True
+        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 94)
+        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
+        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
+        U_LAST_RECEIPTLabel.TabIndex = 22
+        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
+        '
+        'D_LAST_PURCHASEDLabel
+        '
+        D_LAST_PURCHASEDLabel.AutoSize = True
+        D_LAST_PURCHASEDLabel.Location = New System.Drawing.Point(12, 120)
+        D_LAST_PURCHASEDLabel.Name = "D_LAST_PURCHASEDLabel"
+        D_LAST_PURCHASEDLabel.Size = New System.Drawing.Size(110, 13)
+        D_LAST_PURCHASEDLabel.TabIndex = 24
+        D_LAST_PURCHASEDLabel.Text = "Last Date Purchased:"
+        '
+        'T_PAY_METHLabel
+        '
+        T_PAY_METHLabel.AutoSize = True
+        T_PAY_METHLabel.Location = New System.Drawing.Point(12, 146)
+        T_PAY_METHLabel.Name = "T_PAY_METHLabel"
+        T_PAY_METHLabel.Size = New System.Drawing.Size(90, 13)
+        T_PAY_METHLabel.TabIndex = 26
+        T_PAY_METHLabel.Text = "Payment Method:"
+        '
+        'D_START_DATELabel
+        '
+        D_START_DATELabel.AutoSize = True
+        D_START_DATELabel.Location = New System.Drawing.Point(12, 172)
+        D_START_DATELabel.Name = "D_START_DATELabel"
+        D_START_DATELabel.Size = New System.Drawing.Size(102, 13)
+        D_START_DATELabel.TabIndex = 28
+        D_START_DATELabel.Text = "Customer Join Date:"
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(148, 219)
@@ -82,31 +145,15 @@ Partial Class Form1
         Me.TableAdapterManager.CRMDATATableAdapter = Me.CRMDATATableAdapter
         Me.TableAdapterManager.UpdateOrder = LTCCRM.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'U_USERLabel
-        '
-        U_USERLabel.AutoSize = True
-        U_USERLabel.Location = New System.Drawing.Point(12, 16)
-        U_USERLabel.Name = "U_USERLabel"
-        U_USERLabel.Size = New System.Drawing.Size(68, 13)
-        U_USERLabel.TabIndex = 16
-        U_USERLabel.Text = "Customer ID:"
-        '
         'U_USERTextBox
         '
+        Me.U_USERTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.U_USERTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "U_USER", True))
         Me.U_USERTextBox.Location = New System.Drawing.Point(136, 13)
         Me.U_USERTextBox.Name = "U_USERTextBox"
+        Me.U_USERTextBox.ReadOnly = True
         Me.U_USERTextBox.Size = New System.Drawing.Size(100, 20)
         Me.U_USERTextBox.TabIndex = 17
-        '
-        'T_FIRST_NAMELabel
-        '
-        T_FIRST_NAMELabel.AutoSize = True
-        T_FIRST_NAMELabel.Location = New System.Drawing.Point(12, 42)
-        T_FIRST_NAMELabel.Name = "T_FIRST_NAMELabel"
-        T_FIRST_NAMELabel.Size = New System.Drawing.Size(60, 13)
-        T_FIRST_NAMELabel.TabIndex = 18
-        T_FIRST_NAMELabel.Text = "First Name:"
         '
         'T_FIRST_NAMETextBox
         '
@@ -116,15 +163,6 @@ Partial Class Form1
         Me.T_FIRST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_FIRST_NAMETextBox.TabIndex = 19
         '
-        'T_LAST_NAMELabel
-        '
-        T_LAST_NAMELabel.AutoSize = True
-        T_LAST_NAMELabel.Location = New System.Drawing.Point(12, 68)
-        T_LAST_NAMELabel.Name = "T_LAST_NAMELabel"
-        T_LAST_NAMELabel.Size = New System.Drawing.Size(61, 13)
-        T_LAST_NAMELabel.TabIndex = 20
-        T_LAST_NAMELabel.Text = "Last Name:"
-        '
         'T_LAST_NAMETextBox
         '
         Me.T_LAST_NAMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "T_LAST_NAME", True))
@@ -132,15 +170,6 @@ Partial Class Form1
         Me.T_LAST_NAMETextBox.Name = "T_LAST_NAMETextBox"
         Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_LAST_NAMETextBox.TabIndex = 21
-        '
-        'U_LAST_RECEIPTLabel
-        '
-        U_LAST_RECEIPTLabel.AutoSize = True
-        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 94)
-        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
-        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
-        U_LAST_RECEIPTLabel.TabIndex = 22
-        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
         '
         'U_LAST_RECEIPTTextBox
         '
@@ -150,15 +179,6 @@ Partial Class Form1
         Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
         Me.U_LAST_RECEIPTTextBox.TabIndex = 23
         '
-        'D_LAST_PURCHASEDLabel
-        '
-        D_LAST_PURCHASEDLabel.AutoSize = True
-        D_LAST_PURCHASEDLabel.Location = New System.Drawing.Point(12, 120)
-        D_LAST_PURCHASEDLabel.Name = "D_LAST_PURCHASEDLabel"
-        D_LAST_PURCHASEDLabel.Size = New System.Drawing.Size(110, 13)
-        D_LAST_PURCHASEDLabel.TabIndex = 24
-        D_LAST_PURCHASEDLabel.Text = "Last Date Purchased:"
-        '
         'D_LAST_PURCHASEDTextBox
         '
         Me.D_LAST_PURCHASEDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "D_LAST_PURCHASED", True))
@@ -166,24 +186,6 @@ Partial Class Form1
         Me.D_LAST_PURCHASEDTextBox.Name = "D_LAST_PURCHASEDTextBox"
         Me.D_LAST_PURCHASEDTextBox.Size = New System.Drawing.Size(100, 20)
         Me.D_LAST_PURCHASEDTextBox.TabIndex = 25
-        '
-        'T_PAY_METHLabel
-        '
-        T_PAY_METHLabel.AutoSize = True
-        T_PAY_METHLabel.Location = New System.Drawing.Point(12, 146)
-        T_PAY_METHLabel.Name = "T_PAY_METHLabel"
-        T_PAY_METHLabel.Size = New System.Drawing.Size(90, 13)
-        T_PAY_METHLabel.TabIndex = 26
-        T_PAY_METHLabel.Text = "Payment Method:"
-        '
-        'D_START_DATELabel
-        '
-        D_START_DATELabel.AutoSize = True
-        D_START_DATELabel.Location = New System.Drawing.Point(12, 172)
-        D_START_DATELabel.Name = "D_START_DATELabel"
-        D_START_DATELabel.Size = New System.Drawing.Size(102, 13)
-        D_START_DATELabel.TabIndex = 28
-        D_START_DATELabel.Text = "Customer Join Date:"
         '
         'D_START_DATETextBox
         '
@@ -195,6 +197,7 @@ Partial Class Form1
         '
         'T_PAY_METHTextBox
         '
+        Me.T_PAY_METHTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.T_PAY_METHTextBox.FormattingEnabled = True
         Me.T_PAY_METHTextBox.Items.AddRange(New Object() {"Cash", "Debit", "Credit", "Check", "PayPal"})
         Me.T_PAY_METHTextBox.Location = New System.Drawing.Point(136, 143)

@@ -8,3 +8,13 @@ C:\Users\matts\Documents\Visual Studio 2013\Projects\LTCCRM\LTCCRM\obj\Debug\LTC
 C:\Users\matts\Documents\Visual Studio 2013\Projects\LTCCRM\LTCCRM\obj\Debug\LTCCRM.exe
 C:\Users\matts\Documents\Visual Studio 2013\Projects\LTCCRM\LTCCRM\obj\Debug\LTCCRM.xml
 C:\Users\matts\Documents\Visual Studio 2013\Projects\LTCCRM\LTCCRM\obj\Debug\LTCCRM.pdb
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\bin\Debug\LTCCRM.exe.config
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.exe
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.xml
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.pdb
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\bin\Debug\LTCCRM.exe
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\bin\Debug\LTCCRM.pdb
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\bin\Debug\LTCCRM.xml
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.Form1.resources
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.Resources.resources
+C:\Users\matthew.r.sessions\Source\Repos\UOPLTC2\LTCCRM\obj\Debug\LTCCRM.vbproj.GenerateResource.Cache
