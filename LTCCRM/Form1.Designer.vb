@@ -44,6 +44,7 @@ Partial Class Form1
         Me.U_LAST_RECEIPTTextBox = New System.Windows.Forms.TextBox()
         Me.D_LAST_PURCHASEDTextBox = New System.Windows.Forms.TextBox()
         Me.D_START_DATETextBox = New System.Windows.Forms.TextBox()
+        Me.btnUpdateCustomer = New System.Windows.Forms.Button()
         U_USERLabel = New System.Windows.Forms.Label()
         T_FIRST_NAMELabel = New System.Windows.Forms.Label()
         T_LAST_NAMELabel = New System.Windows.Forms.Label()
@@ -122,7 +123,7 @@ Partial Class Form1
         '
         Me.btnAddCustomer.Location = New System.Drawing.Point(230, 300)
         Me.btnAddCustomer.Name = "btnAddCustomer"
-        Me.btnAddCustomer.Size = New System.Drawing.Size(88, 23)
+        Me.btnAddCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnAddCustomer.TabIndex = 15
         Me.btnAddCustomer.Text = "Add Customer"
         Me.btnAddCustomer.UseVisualStyleBackColor = True
@@ -158,9 +159,9 @@ Partial Class Form1
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(136, 300)
+        Me.btnClear.Location = New System.Drawing.Point(126, 300)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(88, 23)
+        Me.btnClear.Size = New System.Drawing.Size(98, 23)
         Me.btnClear.TabIndex = 31
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -219,11 +220,21 @@ Partial Class Form1
         Me.D_START_DATETextBox.Size = New System.Drawing.Size(100, 20)
         Me.D_START_DATETextBox.TabIndex = 38
         '
+        'btnUpdateCustomer
+        '
+        Me.btnUpdateCustomer.Location = New System.Drawing.Point(334, 300)
+        Me.btnUpdateCustomer.Name = "btnUpdateCustomer"
+        Me.btnUpdateCustomer.Size = New System.Drawing.Size(98, 23)
+        Me.btnUpdateCustomer.TabIndex = 39
+        Me.btnUpdateCustomer.Text = "Update Customer"
+        Me.btnUpdateCustomer.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(573, 358)
+        Me.Controls.Add(Me.btnUpdateCustomer)
         Me.Controls.Add(Me.D_START_DATETextBox)
         Me.Controls.Add(Me.D_LAST_PURCHASEDTextBox)
         Me.Controls.Add(Me.U_LAST_RECEIPTTextBox)
@@ -263,5 +274,6 @@ Partial Class Form1
     Friend WithEvents U_LAST_RECEIPTTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_LAST_PURCHASEDTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_START_DATETextBox As System.Windows.Forms.TextBox
+    Friend WithEvents btnUpdateCustomer As System.Windows.Forms.Button
 
 End Class
