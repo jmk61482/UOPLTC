@@ -75,7 +75,7 @@ Public Class Form1
         T_FIRST_NAMETextBox.Text = String.Empty
         T_LAST_NAMETextBox.Text = String.Empty
         U_LAST_RECEIPTTextBox.Text = String.Empty
-        T_PAY_METHTextBox.Text = String.Empty
+        T_PAY_METHTextBox.SelectedIndex = -1
 
         PreFillFields()
 
@@ -103,5 +103,4 @@ Public Class Form1
             D_START_DATETextBox.Text = CRMDATATableAdapter.GetStartDate(ln)
         End If
     End Sub
-
 End Class
