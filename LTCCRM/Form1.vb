@@ -93,6 +93,13 @@ Public Class Form1
         ClearFields()
     End Sub
 
+    ''' <summary>
+    ''' When a customer is selected from the listbox, Information will be pulled from
+    ''' the database and populated in their correct field
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex <> -1 Then
             Dim ln As String = ListBox1.Text
