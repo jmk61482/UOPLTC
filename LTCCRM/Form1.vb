@@ -63,6 +63,8 @@ Public Class Form1
                      fullName)
 
         ClearFields()
+        CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
+        ListBox1.SelectedIndex = -1
 
     End Sub
 
