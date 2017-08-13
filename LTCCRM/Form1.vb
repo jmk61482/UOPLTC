@@ -27,6 +27,8 @@ Public Class Form1
     ''' <remarks></remarks>
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.CRMDATATableAdapter.Fill(Me.CRMDataSet.CRMDATA)
+        ListBox1.SelectedIndex = -1
         PreFillFields()
 
     End Sub
@@ -49,14 +51,16 @@ Public Class Form1
     ''' <remarks></remarks>
     Private Sub AddCustomer()
 
+        Dim fullName As String = T_LAST_NAMETextBox.Text + ", " + T_FIRST_NAMETextBox.Text
+
         CRMDATATableAdapter.Insert(
                      T_FIRST_NAMETextBox.Text,
                      T_LAST_NAMETextBox.Text,
                      U_LAST_RECEIPTTextBox.Text,
                      D_LAST_PURCHASEDTextBox.Text,
                      T_PAY_METHTextBox.Text,
-                     D_START_DATETextBox.Text
-                     )
+                     D_START_DATETextBox.Text,
+                     fullName)
 
         ClearFields()
 
@@ -85,5 +89,18 @@ Public Class Form1
     ''' <remarks></remarks>
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearFields()
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        If ListBox1.SelectedIndex <> -1 Then
+            Dim ln As String = ListBox1.Text
+            U_USERTextBox.Text = CRMDATATableAdapter.GetUserID(ln)
+            T_FIRST_NAMETextBox.Text = CRMDATATableAdapter.GetFirstName(ln)
+            T_LAST_NAMETextBox.Text = CRMDATATableAdapter.GetLastName(ln)
+            U_LAST_RECEIPTTextBox.Text = CRMDATATableAdapter.GetReceiptID(ln)
+            D_LAST_PURCHASEDTextBox.Text = CRMDATATableAdapter.GetDateLastPurchased(ln)
+            T_PAY_METHTextBox.Text = CRMDATATableAdapter.GetPaymentMethod(ln)
+            D_START_DATETextBox.Text = CRMDATATableAdapter.GetStartDate(ln)
+        End If
     End Sub
 End Class

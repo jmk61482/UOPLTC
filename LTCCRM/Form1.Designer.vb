@@ -35,14 +35,15 @@ Partial Class Form1
         Me.CRMDATABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRMDATATableAdapter = New LTCCRM.CRMDataSetTableAdapters.CRMDATATableAdapter()
         Me.TableAdapterManager = New LTCCRM.CRMDataSetTableAdapters.TableAdapterManager()
+        Me.T_PAY_METHTextBox = New System.Windows.Forms.ComboBox()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.U_USERTextBox = New System.Windows.Forms.TextBox()
         Me.T_FIRST_NAMETextBox = New System.Windows.Forms.TextBox()
         Me.T_LAST_NAMETextBox = New System.Windows.Forms.TextBox()
         Me.U_LAST_RECEIPTTextBox = New System.Windows.Forms.TextBox()
         Me.D_LAST_PURCHASEDTextBox = New System.Windows.Forms.TextBox()
         Me.D_START_DATETextBox = New System.Windows.Forms.TextBox()
-        Me.T_PAY_METHTextBox = New System.Windows.Forms.ComboBox()
-        Me.btnClear = New System.Windows.Forms.Button()
         U_USERLabel = New System.Windows.Forms.Label()
         T_FIRST_NAMELabel = New System.Windows.Forms.Label()
         T_LAST_NAMELabel = New System.Windows.Forms.Label()
@@ -119,7 +120,7 @@ Partial Class Form1
         '
         'btnAddCustomer
         '
-        Me.btnAddCustomer.Location = New System.Drawing.Point(220, 238)
+        Me.btnAddCustomer.Location = New System.Drawing.Point(230, 300)
         Me.btnAddCustomer.Name = "btnAddCustomer"
         Me.btnAddCustomer.Size = New System.Drawing.Size(88, 23)
         Me.btnAddCustomer.TabIndex = 15
@@ -146,59 +147,8 @@ Partial Class Form1
         Me.TableAdapterManager.CRMDATATableAdapter = Me.CRMDATATableAdapter
         Me.TableAdapterManager.UpdateOrder = LTCCRM.CRMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'U_USERTextBox
-        '
-        Me.U_USERTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.U_USERTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "U_USER", True))
-        Me.U_USERTextBox.Location = New System.Drawing.Point(136, 13)
-        Me.U_USERTextBox.Name = "U_USERTextBox"
-        Me.U_USERTextBox.ReadOnly = True
-        Me.U_USERTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.U_USERTextBox.TabIndex = 17
-        '
-        'T_FIRST_NAMETextBox
-        '
-        Me.T_FIRST_NAMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "T_FIRST_NAME", True))
-        Me.T_FIRST_NAMETextBox.Location = New System.Drawing.Point(136, 39)
-        Me.T_FIRST_NAMETextBox.Name = "T_FIRST_NAMETextBox"
-        Me.T_FIRST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
-        Me.T_FIRST_NAMETextBox.TabIndex = 19
-        '
-        'T_LAST_NAMETextBox
-        '
-        Me.T_LAST_NAMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "T_LAST_NAME", True))
-        Me.T_LAST_NAMETextBox.Location = New System.Drawing.Point(136, 65)
-        Me.T_LAST_NAMETextBox.Name = "T_LAST_NAMETextBox"
-        Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
-        Me.T_LAST_NAMETextBox.TabIndex = 21
-        '
-        'U_LAST_RECEIPTTextBox
-        '
-        Me.U_LAST_RECEIPTTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "U_LAST_RECEIPT", True))
-        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 91)
-        Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
-        Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.U_LAST_RECEIPTTextBox.TabIndex = 23
-        '
-        'D_LAST_PURCHASEDTextBox
-        '
-        Me.D_LAST_PURCHASEDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "D_LAST_PURCHASED", True))
-        Me.D_LAST_PURCHASEDTextBox.Location = New System.Drawing.Point(136, 117)
-        Me.D_LAST_PURCHASEDTextBox.Name = "D_LAST_PURCHASEDTextBox"
-        Me.D_LAST_PURCHASEDTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.D_LAST_PURCHASEDTextBox.TabIndex = 25
-        '
-        'D_START_DATETextBox
-        '
-        Me.D_START_DATETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CRMDATABindingSource, "D_START_DATE", True))
-        Me.D_START_DATETextBox.Location = New System.Drawing.Point(136, 169)
-        Me.D_START_DATETextBox.Name = "D_START_DATETextBox"
-        Me.D_START_DATETextBox.Size = New System.Drawing.Size(100, 20)
-        Me.D_START_DATETextBox.TabIndex = 29
-        '
         'T_PAY_METHTextBox
         '
-        Me.T_PAY_METHTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.T_PAY_METHTextBox.FormattingEnabled = True
         Me.T_PAY_METHTextBox.Items.AddRange(New Object() {"Cash", "Debit", "Credit", "Check", "PayPal"})
         Me.T_PAY_METHTextBox.Location = New System.Drawing.Point(136, 143)
@@ -208,33 +158,88 @@ Partial Class Form1
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(126, 238)
+        Me.btnClear.Location = New System.Drawing.Point(136, 300)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(88, 23)
         Me.btnClear.TabIndex = 31
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.DataSource = Me.CRMDATABindingSource
+        Me.ListBox1.DisplayMember = "T_FULL_NAME"
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(280, 12)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(191, 186)
+        Me.ListBox1.Sorted = True
+        Me.ListBox1.TabIndex = 32
+        '
+        'U_USERTextBox
+        '
+        Me.U_USERTextBox.Location = New System.Drawing.Point(136, 13)
+        Me.U_USERTextBox.Name = "U_USERTextBox"
+        Me.U_USERTextBox.ReadOnly = True
+        Me.U_USERTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.U_USERTextBox.TabIndex = 33
+        '
+        'T_FIRST_NAMETextBox
+        '
+        Me.T_FIRST_NAMETextBox.Location = New System.Drawing.Point(136, 39)
+        Me.T_FIRST_NAMETextBox.Name = "T_FIRST_NAMETextBox"
+        Me.T_FIRST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.T_FIRST_NAMETextBox.TabIndex = 34
+        '
+        'T_LAST_NAMETextBox
+        '
+        Me.T_LAST_NAMETextBox.Location = New System.Drawing.Point(136, 65)
+        Me.T_LAST_NAMETextBox.Name = "T_LAST_NAMETextBox"
+        Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.T_LAST_NAMETextBox.TabIndex = 35
+        '
+        'U_LAST_RECEIPTTextBox
+        '
+        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 91)
+        Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
+        Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.U_LAST_RECEIPTTextBox.TabIndex = 36
+        '
+        'D_LAST_PURCHASEDTextBox
+        '
+        Me.D_LAST_PURCHASEDTextBox.Location = New System.Drawing.Point(136, 117)
+        Me.D_LAST_PURCHASEDTextBox.Name = "D_LAST_PURCHASEDTextBox"
+        Me.D_LAST_PURCHASEDTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.D_LAST_PURCHASEDTextBox.TabIndex = 37
+        '
+        'D_START_DATETextBox
+        '
+        Me.D_START_DATETextBox.Location = New System.Drawing.Point(136, 169)
+        Me.D_START_DATETextBox.Name = "D_START_DATETextBox"
+        Me.D_START_DATETextBox.Size = New System.Drawing.Size(100, 20)
+        Me.D_START_DATETextBox.TabIndex = 38
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(320, 273)
+        Me.ClientSize = New System.Drawing.Size(573, 358)
+        Me.Controls.Add(Me.D_START_DATETextBox)
+        Me.Controls.Add(Me.D_LAST_PURCHASEDTextBox)
+        Me.Controls.Add(Me.U_LAST_RECEIPTTextBox)
+        Me.Controls.Add(Me.T_LAST_NAMETextBox)
+        Me.Controls.Add(Me.T_FIRST_NAMETextBox)
+        Me.Controls.Add(Me.U_USERTextBox)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.T_PAY_METHTextBox)
         Me.Controls.Add(U_USERLabel)
-        Me.Controls.Add(Me.U_USERTextBox)
         Me.Controls.Add(T_FIRST_NAMELabel)
-        Me.Controls.Add(Me.T_FIRST_NAMETextBox)
         Me.Controls.Add(T_LAST_NAMELabel)
-        Me.Controls.Add(Me.T_LAST_NAMETextBox)
         Me.Controls.Add(U_LAST_RECEIPTLabel)
-        Me.Controls.Add(Me.U_LAST_RECEIPTTextBox)
         Me.Controls.Add(D_LAST_PURCHASEDLabel)
-        Me.Controls.Add(Me.D_LAST_PURCHASEDTextBox)
         Me.Controls.Add(T_PAY_METHLabel)
         Me.Controls.Add(D_START_DATELabel)
-        Me.Controls.Add(Me.D_START_DATETextBox)
         Me.Controls.Add(Me.btnAddCustomer)
         Me.Name = "Form1"
         Me.Text = "Learning Team C CRM"
@@ -249,13 +254,14 @@ Partial Class Form1
     Friend WithEvents CRMDATABindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CRMDATATableAdapter As LTCCRM.CRMDataSetTableAdapters.CRMDATATableAdapter
     Friend WithEvents TableAdapterManager As LTCCRM.CRMDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents T_PAY_METHTextBox As System.Windows.Forms.ComboBox
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents U_USERTextBox As System.Windows.Forms.TextBox
     Friend WithEvents T_FIRST_NAMETextBox As System.Windows.Forms.TextBox
     Friend WithEvents T_LAST_NAMETextBox As System.Windows.Forms.TextBox
     Friend WithEvents U_LAST_RECEIPTTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_LAST_PURCHASEDTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_START_DATETextBox As System.Windows.Forms.TextBox
-    Friend WithEvents T_PAY_METHTextBox As System.Windows.Forms.ComboBox
-    Friend WithEvents btnClear As System.Windows.Forms.Button
 
 End Class

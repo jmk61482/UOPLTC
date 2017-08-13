@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRMDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CRMDataSet.vb">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
