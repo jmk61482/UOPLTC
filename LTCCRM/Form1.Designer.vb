@@ -110,6 +110,15 @@ Partial Class Form1
         D_START_DATELabel.TabIndex = 28
         D_START_DATELabel.Text = "Customer Join Date:"
         '
+        'U_LAST_RECEIPTLabel
+        '
+        U_LAST_RECEIPTLabel.AutoSize = True
+        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 164)
+        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
+        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
+        U_LAST_RECEIPTLabel.TabIndex = 22
+        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
+        '
         'btnAddCustomer
         '
         Me.btnAddCustomer.Location = New System.Drawing.Point(311, 404)
@@ -202,6 +211,7 @@ Partial Class Form1
         '
         Me.D_START_DATETextBox.Location = New System.Drawing.Point(136, 299)
         Me.D_START_DATETextBox.Name = "D_START_DATETextBox"
+        Me.D_START_DATETextBox.ReadOnly = True
         Me.D_START_DATETextBox.Size = New System.Drawing.Size(100, 20)
         Me.D_START_DATETextBox.TabIndex = 38
         '
@@ -213,15 +223,6 @@ Partial Class Form1
         Me.btnUpdateCustomer.TabIndex = 39
         Me.btnUpdateCustomer.Text = "Update Customer"
         Me.btnUpdateCustomer.UseVisualStyleBackColor = True
-        '
-        'U_LAST_RECEIPTLabel
-        '
-        U_LAST_RECEIPTLabel.AutoSize = True
-        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 164)
-        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
-        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
-        U_LAST_RECEIPTLabel.TabIndex = 22
-        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
         '
         'U_LAST_RECEIPTTextBox
         '
