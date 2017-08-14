@@ -85,7 +85,7 @@ SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PA
               <Mapping SourceColumn="T_FULL_NAME" DataSetColumn="T_FULL_NAME" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetDateLastPurchased" Modifier="Public" Name="GetDateLastPurchased" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="GetDateLastPurchased">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetDateLastPurchased" Modifier="Public" Name="GetDateLastPurchased" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDateLastPurchased">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        D_LAST_PURCHASED
@@ -97,7 +97,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetFirstName" Modifier="Public" Name="GetFirstName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetFirstName">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetFirstName" Modifier="Public" Name="GetFirstName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetFirstName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        T_FIRST_NAME
@@ -109,7 +109,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetLastName" Modifier="Public" Name="GetLastName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetLastName">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetLastName" Modifier="Public" Name="GetLastName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetLastName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        T_LAST_NAME
@@ -121,7 +121,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetPaymentMethod" Modifier="Public" Name="GetPaymentMethod" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="GetPaymentMethod">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetPaymentMethod" Modifier="Public" Name="GetPaymentMethod" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetPaymentMethod">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        T_PAY_METH
@@ -145,7 +145,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStartDate" Modifier="Public" Name="GetStartDate" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="GetStartDate">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStartDate" Modifier="Public" Name="GetStartDate" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="GetStartDate">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        D_START_DATE
@@ -157,7 +157,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUserID" Modifier="Public" Name="GetUserID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetUserID">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="dbo.CRMDATA" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUserID" Modifier="Public" Name="GetUserID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="GetUserID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        U_USER
@@ -169,13 +169,34 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectMaxUserID" Modifier="Public" Name="SelectMaxUserID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SelectMaxUserID">
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectMaxUserID" Modifier="Public" Name="SelectMaxUserID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="SelectMaxUserID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT MAX(U_USER) FROM dbo.CRMDATA</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="CRMConnectionString1 (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateUser" Modifier="Public" Name="UpdateUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="UpdateUser">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       CRMDATA
+SET                T_FIRST_NAME = @T_FIRST_NAME, T_LAST_NAME = @T_LAST_NAME, U_LAST_RECEIPT = @U_LAST_RECEIPT, D_LAST_PURCHASED = @D_LAST_PURCHASED, T_PAY_METH = @T_PAY_METH, 
+                         D_START_DATE = @D_START_DATE, T_FULL_NAME = @T_FULL_NAME
+WHERE        (U_USER = @U_USER); 
+SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY_METH, D_START_DATE, T_FULL_NAME FROM CRMDATA WHERE (U_USER = @U_USER)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="T_FIRST_NAME" ColumnName="T_FIRST_NAME" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(20)" DbType="String" Direction="Input" ParameterName="@T_FIRST_NAME" Precision="0" ProviderType="NChar" Scale="0" Size="20" SourceColumn="T_FIRST_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="T_LAST_NAME" ColumnName="T_LAST_NAME" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(20)" DbType="String" Direction="Input" ParameterName="@T_LAST_NAME" Precision="0" ProviderType="NChar" Scale="0" Size="20" SourceColumn="T_LAST_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="U_LAST_RECEIPT" ColumnName="U_LAST_RECEIPT" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@U_LAST_RECEIPT" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="U_LAST_RECEIPT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="D_LAST_PURCHASED" ColumnName="D_LAST_PURCHASED" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D_LAST_PURCHASED" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="D_LAST_PURCHASED" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="T_PAY_METH" ColumnName="T_PAY_METH" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@T_PAY_METH" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="T_PAY_METH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="D_START_DATE" ColumnName="D_START_DATE" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D_START_DATE" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="D_START_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T_FULL_NAME" ColumnName="T_FULL_NAME" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="nchar(40)" DbType="String" Direction="Input" ParameterName="@T_FULL_NAME" Precision="0" ProviderType="NChar" Scale="0" Size="40" SourceColumn="T_FULL_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="U_USER" ColumnName="U_USER" DataSourceName="[C:\USERS\MATTS.MRSESSIONSMAIN\SOURCE\REPOS\UOPLTC\LTCCRM\CRM.MDF].dbo.CRMDATA" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@U_USER" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="U_USER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -187,7 +208,7 @@ WHERE        (T_FULL_NAME = @fullName)</CommandText>
   <xs:element name="CRMDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CRMDataSet" msprop:Generator_UserDSName="CRMDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CRMDATA" msprop:Generator_TableClassName="CRMDATADataTable" msprop:Generator_TableVarName="tableCRMDATA" msprop:Generator_RowChangedName="CRMDATARowChanged" msprop:Generator_TablePropName="CRMDATA" msprop:Generator_RowDeletingName="CRMDATARowDeleting" msprop:Generator_RowChangingName="CRMDATARowChanging" msprop:Generator_RowEvHandlerName="CRMDATARowChangeEventHandler" msprop:Generator_RowDeletedName="CRMDATARowDeleted" msprop:Generator_RowClassName="CRMDATARow" msprop:Generator_UserTableName="CRMDATA" msprop:Generator_RowEvArgName="CRMDATARowChangeEvent">
+        <xs:element name="CRMDATA" msprop:Generator_TableClassName="CRMDATADataTable" msprop:Generator_TableVarName="tableCRMDATA" msprop:Generator_TablePropName="CRMDATA" msprop:Generator_RowDeletingName="CRMDATARowDeleting" msprop:Generator_RowChangingName="CRMDATARowChanging" msprop:Generator_RowEvHandlerName="CRMDATARowChangeEventHandler" msprop:Generator_RowDeletedName="CRMDATARowDeleted" msprop:Generator_UserTableName="CRMDATA" msprop:Generator_RowChangedName="CRMDATARowChanged" msprop:Generator_RowEvArgName="CRMDATARowChangeEvent" msprop:Generator_RowClassName="CRMDATARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="U_USER" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnU_USER" msprop:Generator_ColumnPropNameInRow="U_USER" msprop:Generator_ColumnPropNameInTable="U_USERColumn" msprop:Generator_UserColumnName="U_USER" type="xs:int" />

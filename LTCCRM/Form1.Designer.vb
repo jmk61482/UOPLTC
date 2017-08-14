@@ -26,10 +26,10 @@ Partial Class Form1
         Dim U_USERLabel As System.Windows.Forms.Label
         Dim T_FIRST_NAMELabel As System.Windows.Forms.Label
         Dim T_LAST_NAMELabel As System.Windows.Forms.Label
-        Dim U_LAST_RECEIPTLabel As System.Windows.Forms.Label
         Dim D_LAST_PURCHASEDLabel As System.Windows.Forms.Label
         Dim T_PAY_METHLabel As System.Windows.Forms.Label
         Dim D_START_DATELabel As System.Windows.Forms.Label
+        Dim U_LAST_RECEIPTLabel As System.Windows.Forms.Label
         Me.btnAddCustomer = New System.Windows.Forms.Button()
         Me.CRMDataSet = New LTCCRM.CRMDataSet()
         Me.CRMDATABindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -41,17 +41,17 @@ Partial Class Form1
         Me.U_USERTextBox = New System.Windows.Forms.TextBox()
         Me.T_FIRST_NAMETextBox = New System.Windows.Forms.TextBox()
         Me.T_LAST_NAMETextBox = New System.Windows.Forms.TextBox()
-        Me.U_LAST_RECEIPTTextBox = New System.Windows.Forms.TextBox()
         Me.D_LAST_PURCHASEDTextBox = New System.Windows.Forms.TextBox()
         Me.D_START_DATETextBox = New System.Windows.Forms.TextBox()
         Me.btnUpdateCustomer = New System.Windows.Forms.Button()
+        Me.U_LAST_RECEIPTTextBox = New System.Windows.Forms.TextBox()
         U_USERLabel = New System.Windows.Forms.Label()
         T_FIRST_NAMELabel = New System.Windows.Forms.Label()
         T_LAST_NAMELabel = New System.Windows.Forms.Label()
-        U_LAST_RECEIPTLabel = New System.Windows.Forms.Label()
         D_LAST_PURCHASEDLabel = New System.Windows.Forms.Label()
         T_PAY_METHLabel = New System.Windows.Forms.Label()
         D_START_DATELabel = New System.Windows.Forms.Label()
+        U_LAST_RECEIPTLabel = New System.Windows.Forms.Label()
         CType(Me.CRMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRMDATABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,15 +83,6 @@ Partial Class Form1
         T_LAST_NAMELabel.TabIndex = 20
         T_LAST_NAMELabel.Text = "Last Name:"
         '
-        'U_LAST_RECEIPTLabel
-        '
-        U_LAST_RECEIPTLabel.AutoSize = True
-        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 164)
-        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
-        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
-        U_LAST_RECEIPTLabel.TabIndex = 22
-        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
-        '
         'D_LAST_PURCHASEDLabel
         '
         D_LAST_PURCHASEDLabel.AutoSize = True
@@ -121,7 +112,7 @@ Partial Class Form1
         '
         'btnAddCustomer
         '
-        Me.btnAddCustomer.Location = New System.Drawing.Point(341, 395)
+        Me.btnAddCustomer.Location = New System.Drawing.Point(311, 404)
         Me.btnAddCustomer.Name = "btnAddCustomer"
         Me.btnAddCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnAddCustomer.TabIndex = 15
@@ -150,6 +141,7 @@ Partial Class Form1
         '
         'T_PAY_METHTextBox
         '
+        Me.T_PAY_METHTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.T_PAY_METHTextBox.FormattingEnabled = True
         Me.T_PAY_METHTextBox.Items.AddRange(New Object() {"Cash", "Debit", "Credit", "Check", "PayPal"})
         Me.T_PAY_METHTextBox.Location = New System.Drawing.Point(136, 253)
@@ -159,7 +151,7 @@ Partial Class Form1
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(237, 395)
+        Me.btnClear.Location = New System.Drawing.Point(207, 404)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(98, 23)
         Me.btnClear.TabIndex = 31
@@ -199,13 +191,6 @@ Partial Class Form1
         Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_LAST_NAMETextBox.TabIndex = 35
         '
-        'U_LAST_RECEIPTTextBox
-        '
-        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 161)
-        Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
-        Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.U_LAST_RECEIPTTextBox.TabIndex = 36
-        '
         'D_LAST_PURCHASEDTextBox
         '
         Me.D_LAST_PURCHASEDTextBox.Location = New System.Drawing.Point(136, 207)
@@ -222,12 +207,28 @@ Partial Class Form1
         '
         'btnUpdateCustomer
         '
-        Me.btnUpdateCustomer.Location = New System.Drawing.Point(445, 395)
+        Me.btnUpdateCustomer.Location = New System.Drawing.Point(415, 404)
         Me.btnUpdateCustomer.Name = "btnUpdateCustomer"
         Me.btnUpdateCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdateCustomer.TabIndex = 39
         Me.btnUpdateCustomer.Text = "Update Customer"
         Me.btnUpdateCustomer.UseVisualStyleBackColor = True
+        '
+        'U_LAST_RECEIPTLabel
+        '
+        U_LAST_RECEIPTLabel.AutoSize = True
+        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 164)
+        U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
+        U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
+        U_LAST_RECEIPTLabel.TabIndex = 22
+        U_LAST_RECEIPTLabel.Text = "Last Receipt Number:"
+        '
+        'U_LAST_RECEIPTTextBox
+        '
+        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 161)
+        Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
+        Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.U_LAST_RECEIPTTextBox.TabIndex = 36
         '
         'Form1
         '
@@ -271,9 +272,9 @@ Partial Class Form1
     Friend WithEvents U_USERTextBox As System.Windows.Forms.TextBox
     Friend WithEvents T_FIRST_NAMETextBox As System.Windows.Forms.TextBox
     Friend WithEvents T_LAST_NAMETextBox As System.Windows.Forms.TextBox
-    Friend WithEvents U_LAST_RECEIPTTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_LAST_PURCHASEDTextBox As System.Windows.Forms.TextBox
     Friend WithEvents D_START_DATETextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnUpdateCustomer As System.Windows.Forms.Button
+    Friend WithEvents U_LAST_RECEIPTTextBox As System.Windows.Forms.TextBox
 
 End Class

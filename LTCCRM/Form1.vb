@@ -1,6 +1,5 @@
 ﻿'Learning Team C
 
-'test comment
 Public Class Form1
 
     Private Const DateFormat As String = "{0:MM/dd/yyyy}"
@@ -27,7 +26,6 @@ Public Class Form1
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.CRMDATATableAdapter.Fill(Me.CRMDataSet.CRMDATA)
         ListBox1.SelectedIndex = -1
         PreFillFields()
@@ -78,7 +76,7 @@ Public Class Form1
         T_FIRST_NAMETextBox.Text = String.Empty
         T_LAST_NAMETextBox.Text = String.Empty
         U_LAST_RECEIPTTextBox.Text = String.Empty
-        T_PAY_METHTextBox.Text = String.Empty
+        T_PAY_METHTextBox.SelectedIndex = -1
 
         PreFillFields()
 
@@ -104,13 +102,31 @@ Public Class Form1
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex <> -1 Then
             Dim ln As String = ListBox1.Text
-            U_USERTextBox.Text = CRMDATATableAdapter.GetUserID(ln)
-            T_FIRST_NAMETextBox.Text = CRMDATATableAdapter.GetFirstName(ln)
-            T_LAST_NAMETextBox.Text = CRMDATATableAdapter.GetLastName(ln)
-            U_LAST_RECEIPTTextBox.Text = CRMDATATableAdapter.GetReceiptID(ln)
-            D_LAST_PURCHASEDTextBox.Text = CRMDATATableAdapter.GetDateLastPurchased(ln)
-            T_PAY_METHTextBox.Text = CRMDATATableAdapter.GetPaymentMethod(ln)
-            D_START_DATETextBox.Text = CRMDATATableAdapter.GetStartDate(ln)
+            U_USERTextBox.Text = Trim(CRMDATATableAdapter.GetUserID(ln))
+            T_FIRST_NAMETextBox.Text = Trim(CRMDATATableAdapter.GetFirstName(ln))
+            T_LAST_NAMETextBox.Text = Trim(CRMDATATableAdapter.GetLastName(ln))
+            U_LAST_RECEIPTTextBox.Text = Trim(CRMDATATableAdapter.GetReceiptID(ln))
+            D_LAST_PURCHASEDTextBox.Text = Trim(CRMDATATableAdapter.GetDateLastPurchased(ln))
+            T_PAY_METHTextBox.Text = Trim(CRMDATATableAdapter.GetPaymentMethod(ln))
+            D_START_DATETextBox.Text = Trim(CRMDATATableAdapter.GetStartDate(ln))
         End If
+    End Sub
+
+    Private Sub btnUpdateCustomer_Click(sender As Object, e As EventArgs) Handles btnUpdateCustomer.Click
+        Dim fullName As String = T_LAST_NAMETextBox.Text + ", " + T_FIRST_NAMETextBox.Text
+
+        CRMDATATableAdapter.UpdateUser(
+                     T_FIRST_NAMETextBox.Text,
+                     T_LAST_NAMETextBox.Text,
+                     U_LAST_RECEIPTTextBox.Text,
+                     D_LAST_PURCHASEDTextBox.Text,
+                     T_PAY_METHTextBox.Text,
+                     D_START_DATETextBox.Text,
+                     fullName,
+                     U_USERTextBox.Text)
+
+        ClearFields()
+        CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
+        ListBox1.SelectedIndex = -1
     End Sub
 End Class

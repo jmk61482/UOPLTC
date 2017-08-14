@@ -1015,7 +1015,7 @@ Namespace CRMDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(8) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(9) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY" & _
@@ -1067,6 +1067,23 @@ Namespace CRMDataSetTableAdapters
             Me._commandCollection(8).Connection = Me.Connection
             Me._commandCollection(8).CommandText = "SELECT MAX(U_USER) FROM dbo.CRMDATA"
             Me._commandCollection(8).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(9) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(9).Connection = Me.Connection
+            Me._commandCollection(9).CommandText = "UPDATE       CRMDATA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SET                T_FIRST_NAME = @T_FIRST_NAME, T_LAST_NAM" & _
+                "E = @T_LAST_NAME, U_LAST_RECEIPT = @U_LAST_RECEIPT, D_LAST_PURCHASED = @D_LAST_P" & _
+                "URCHASED, T_PAY_METH = @T_PAY_METH, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                         D_START_DATE = @D" & _
+                "_START_DATE, T_FULL_NAME = @T_FULL_NAME" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (U_USER = @U_USER); " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SELE" & _
+                "CT U_USER, T_FIRST_NAME, T_LAST_NAME, U_LAST_RECEIPT, D_LAST_PURCHASED, T_PAY_ME" & _
+                "TH, D_START_DATE, T_FULL_NAME FROM CRMDATA WHERE (U_USER = @U_USER)"
+            Me._commandCollection(9).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T_FIRST_NAME", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "T_FIRST_NAME", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T_LAST_NAME", Global.System.Data.SqlDbType.NChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "T_LAST_NAME", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@U_LAST_RECEIPT", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "U_LAST_RECEIPT", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@D_LAST_PURCHASED", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "D_LAST_PURCHASED", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T_PAY_METH", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "T_PAY_METH", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@D_START_DATE", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "D_START_DATE", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T_FULL_NAME", Global.System.Data.SqlDbType.NChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, "T_FULL_NAME", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@U_USER", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "U_USER", Global.System.Data.DataRowVersion.Original, False, Nothing, "", "", ""))
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -1577,6 +1594,60 @@ Namespace CRMDataSetTableAdapters
             Else
                 Return CType(returnValue, Object)
             End If
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, False)> _
+        Public Overridable Overloads Function UpdateUser(ByVal T_FIRST_NAME As String, ByVal T_LAST_NAME As String, ByVal U_LAST_RECEIPT As Integer, ByVal D_LAST_PURCHASED As String, ByVal T_PAY_METH As String, ByVal D_START_DATE As String, ByVal T_FULL_NAME As String, ByVal U_USER As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(9)
+            If (T_FIRST_NAME Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("T_FIRST_NAME")
+            Else
+                command.Parameters(0).Value = CType(T_FIRST_NAME, String)
+            End If
+            If (T_LAST_NAME Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("T_LAST_NAME")
+            Else
+                command.Parameters(1).Value = CType(T_LAST_NAME, String)
+            End If
+            command.Parameters(2).Value = CType(U_LAST_RECEIPT, Integer)
+            If (D_LAST_PURCHASED Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("D_LAST_PURCHASED")
+            Else
+                command.Parameters(3).Value = CType(D_LAST_PURCHASED, String)
+            End If
+            If (T_PAY_METH Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("T_PAY_METH")
+            Else
+                command.Parameters(4).Value = CType(T_PAY_METH, String)
+            End If
+            If (D_START_DATE Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("D_START_DATE")
+            Else
+                command.Parameters(5).Value = CType(D_START_DATE, String)
+            End If
+            If (T_FULL_NAME Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(T_FULL_NAME, String)
+            End If
+            command.Parameters(7).Value = CType(U_USER, Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open()
+            End If
+            Dim returnValue As Integer
+            Try
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close()
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
