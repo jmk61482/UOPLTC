@@ -68,7 +68,7 @@ Partial Class Form1
         'T_FIRST_NAMELabel
         '
         T_FIRST_NAMELabel.AutoSize = True
-        T_FIRST_NAMELabel.Location = New System.Drawing.Point(12, 42)
+        T_FIRST_NAMELabel.Location = New System.Drawing.Point(12, 62)
         T_FIRST_NAMELabel.Name = "T_FIRST_NAMELabel"
         T_FIRST_NAMELabel.Size = New System.Drawing.Size(60, 13)
         T_FIRST_NAMELabel.TabIndex = 18
@@ -77,7 +77,7 @@ Partial Class Form1
         'T_LAST_NAMELabel
         '
         T_LAST_NAMELabel.AutoSize = True
-        T_LAST_NAMELabel.Location = New System.Drawing.Point(12, 68)
+        T_LAST_NAMELabel.Location = New System.Drawing.Point(12, 113)
         T_LAST_NAMELabel.Name = "T_LAST_NAMELabel"
         T_LAST_NAMELabel.Size = New System.Drawing.Size(61, 13)
         T_LAST_NAMELabel.TabIndex = 20
@@ -86,7 +86,7 @@ Partial Class Form1
         'U_LAST_RECEIPTLabel
         '
         U_LAST_RECEIPTLabel.AutoSize = True
-        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 94)
+        U_LAST_RECEIPTLabel.Location = New System.Drawing.Point(12, 164)
         U_LAST_RECEIPTLabel.Name = "U_LAST_RECEIPTLabel"
         U_LAST_RECEIPTLabel.Size = New System.Drawing.Size(110, 13)
         U_LAST_RECEIPTLabel.TabIndex = 22
@@ -95,7 +95,7 @@ Partial Class Form1
         'D_LAST_PURCHASEDLabel
         '
         D_LAST_PURCHASEDLabel.AutoSize = True
-        D_LAST_PURCHASEDLabel.Location = New System.Drawing.Point(12, 120)
+        D_LAST_PURCHASEDLabel.Location = New System.Drawing.Point(12, 210)
         D_LAST_PURCHASEDLabel.Name = "D_LAST_PURCHASEDLabel"
         D_LAST_PURCHASEDLabel.Size = New System.Drawing.Size(110, 13)
         D_LAST_PURCHASEDLabel.TabIndex = 24
@@ -104,7 +104,7 @@ Partial Class Form1
         'T_PAY_METHLabel
         '
         T_PAY_METHLabel.AutoSize = True
-        T_PAY_METHLabel.Location = New System.Drawing.Point(12, 146)
+        T_PAY_METHLabel.Location = New System.Drawing.Point(12, 256)
         T_PAY_METHLabel.Name = "T_PAY_METHLabel"
         T_PAY_METHLabel.Size = New System.Drawing.Size(90, 13)
         T_PAY_METHLabel.TabIndex = 26
@@ -113,7 +113,7 @@ Partial Class Form1
         'D_START_DATELabel
         '
         D_START_DATELabel.AutoSize = True
-        D_START_DATELabel.Location = New System.Drawing.Point(12, 172)
+        D_START_DATELabel.Location = New System.Drawing.Point(12, 302)
         D_START_DATELabel.Name = "D_START_DATELabel"
         D_START_DATELabel.Size = New System.Drawing.Size(102, 13)
         D_START_DATELabel.TabIndex = 28
@@ -121,7 +121,7 @@ Partial Class Form1
         '
         'btnAddCustomer
         '
-        Me.btnAddCustomer.Location = New System.Drawing.Point(230, 300)
+        Me.btnAddCustomer.Location = New System.Drawing.Point(341, 395)
         Me.btnAddCustomer.Name = "btnAddCustomer"
         Me.btnAddCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnAddCustomer.TabIndex = 15
@@ -152,14 +152,14 @@ Partial Class Form1
         '
         Me.T_PAY_METHTextBox.FormattingEnabled = True
         Me.T_PAY_METHTextBox.Items.AddRange(New Object() {"Cash", "Debit", "Credit", "Check", "PayPal"})
-        Me.T_PAY_METHTextBox.Location = New System.Drawing.Point(136, 143)
+        Me.T_PAY_METHTextBox.Location = New System.Drawing.Point(136, 253)
         Me.T_PAY_METHTextBox.Name = "T_PAY_METHTextBox"
         Me.T_PAY_METHTextBox.Size = New System.Drawing.Size(100, 21)
         Me.T_PAY_METHTextBox.TabIndex = 30
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(126, 300)
+        Me.btnClear.Location = New System.Drawing.Point(237, 395)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(98, 23)
         Me.btnClear.TabIndex = 31
@@ -171,9 +171,9 @@ Partial Class Form1
         Me.ListBox1.DataSource = Me.CRMDATABindingSource
         Me.ListBox1.DisplayMember = "T_FULL_NAME"
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(280, 12)
+        Me.ListBox1.Location = New System.Drawing.Point(293, 13)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(191, 186)
+        Me.ListBox1.Size = New System.Drawing.Size(210, 316)
         Me.ListBox1.Sorted = True
         Me.ListBox1.TabIndex = 32
         '
@@ -187,42 +187,42 @@ Partial Class Form1
         '
         'T_FIRST_NAMETextBox
         '
-        Me.T_FIRST_NAMETextBox.Location = New System.Drawing.Point(136, 39)
+        Me.T_FIRST_NAMETextBox.Location = New System.Drawing.Point(136, 59)
         Me.T_FIRST_NAMETextBox.Name = "T_FIRST_NAMETextBox"
         Me.T_FIRST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_FIRST_NAMETextBox.TabIndex = 34
         '
         'T_LAST_NAMETextBox
         '
-        Me.T_LAST_NAMETextBox.Location = New System.Drawing.Point(136, 65)
+        Me.T_LAST_NAMETextBox.Location = New System.Drawing.Point(136, 110)
         Me.T_LAST_NAMETextBox.Name = "T_LAST_NAMETextBox"
         Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_LAST_NAMETextBox.TabIndex = 35
         '
         'U_LAST_RECEIPTTextBox
         '
-        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 91)
+        Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 161)
         Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
         Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
         Me.U_LAST_RECEIPTTextBox.TabIndex = 36
         '
         'D_LAST_PURCHASEDTextBox
         '
-        Me.D_LAST_PURCHASEDTextBox.Location = New System.Drawing.Point(136, 117)
+        Me.D_LAST_PURCHASEDTextBox.Location = New System.Drawing.Point(136, 207)
         Me.D_LAST_PURCHASEDTextBox.Name = "D_LAST_PURCHASEDTextBox"
         Me.D_LAST_PURCHASEDTextBox.Size = New System.Drawing.Size(100, 20)
         Me.D_LAST_PURCHASEDTextBox.TabIndex = 37
         '
         'D_START_DATETextBox
         '
-        Me.D_START_DATETextBox.Location = New System.Drawing.Point(136, 169)
+        Me.D_START_DATETextBox.Location = New System.Drawing.Point(136, 299)
         Me.D_START_DATETextBox.Name = "D_START_DATETextBox"
         Me.D_START_DATETextBox.Size = New System.Drawing.Size(100, 20)
         Me.D_START_DATETextBox.TabIndex = 38
         '
         'btnUpdateCustomer
         '
-        Me.btnUpdateCustomer.Location = New System.Drawing.Point(334, 300)
+        Me.btnUpdateCustomer.Location = New System.Drawing.Point(445, 395)
         Me.btnUpdateCustomer.Name = "btnUpdateCustomer"
         Me.btnUpdateCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdateCustomer.TabIndex = 39
@@ -233,7 +233,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(573, 358)
+        Me.ClientSize = New System.Drawing.Size(609, 471)
         Me.Controls.Add(Me.btnUpdateCustomer)
         Me.Controls.Add(Me.D_START_DATETextBox)
         Me.Controls.Add(Me.D_LAST_PURCHASEDTextBox)
