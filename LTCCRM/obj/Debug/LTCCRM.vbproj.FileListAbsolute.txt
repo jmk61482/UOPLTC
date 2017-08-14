@@ -31,3 +31,10 @@ C:\Users\matts.MRSESSIONSMAIN\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.pdb
 C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\bin\Debug\LTCCRM.exe.config
 C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.exe
 C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.xml
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\bin\Debug\LTCCRM.exe
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\bin\Debug\LTCCRM.pdb
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\bin\Debug\LTCCRM.xml
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.Form1.resources
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.Resources.resources
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.vbproj.GenerateResource.Cache
+C:\Users\Joe\Source\Repos\UOPLTC\LTCCRM\obj\Debug\LTCCRM.pdb

@@ -188,6 +188,7 @@ Partial Class Form1
         'T_FIRST_NAMETextBox
         '
         Me.T_FIRST_NAMETextBox.Location = New System.Drawing.Point(136, 59)
+        Me.T_FIRST_NAMETextBox.MaxLength = 20
         Me.T_FIRST_NAMETextBox.Name = "T_FIRST_NAMETextBox"
         Me.T_FIRST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_FIRST_NAMETextBox.TabIndex = 34
@@ -195,6 +196,7 @@ Partial Class Form1
         'T_LAST_NAMETextBox
         '
         Me.T_LAST_NAMETextBox.Location = New System.Drawing.Point(136, 110)
+        Me.T_LAST_NAMETextBox.MaxLength = 20
         Me.T_LAST_NAMETextBox.Name = "T_LAST_NAMETextBox"
         Me.T_LAST_NAMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.T_LAST_NAMETextBox.TabIndex = 35
@@ -202,6 +204,7 @@ Partial Class Form1
         'U_LAST_RECEIPTTextBox
         '
         Me.U_LAST_RECEIPTTextBox.Location = New System.Drawing.Point(136, 161)
+        Me.U_LAST_RECEIPTTextBox.MaxLength = 999999999
         Me.U_LAST_RECEIPTTextBox.Name = "U_LAST_RECEIPTTextBox"
         Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
         Me.U_LAST_RECEIPTTextBox.TabIndex = 36

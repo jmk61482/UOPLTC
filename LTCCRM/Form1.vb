@@ -113,4 +113,17 @@ Public Class Form1
             D_START_DATETextBox.Text = CRMDATATableAdapter.GetStartDate(ln)
         End If
     End Sub
+
+    Private Sub U_LAST_RECEIPTTextBox_TextChanged(sender As Object, e As EventArgs) Handles U_LAST_RECEIPTTextBox.TextChanged
+        
+
+    End Sub
+
+
+    Private Sub U_LAST_RECEIPTTextBox_KeyPress(sender As Object, e As KeyPressEventArgs)
+        ' If (e.KeyChar < "0" OrElse e.KeyChar > "9") Then _
+        '   e.KeyChar <> ControlChars.Back AndAlso e.KeyChar <> "." AndAlso e.KeyChar <> "," Then
+        'e.Handled = True
+        'End If
+    End Sub
 End Class
