@@ -43,6 +43,14 @@ LTCCRM
 	<param name="sender"></param>
 	<param name="e"></param>
 	<remarks></remarks>
+</member><member name="M:LTCCRM.Form1.ListBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ When a customer is selected from the listbox, Information will be pulled from
+ the database and populated in their correct field
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
 </member><member name="T:LTCCRM.CRMDataSet.CRMDATADataTable">
 	<summary>
 Represents the strongly named DataTable class.
