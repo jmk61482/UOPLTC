@@ -45,6 +45,7 @@ Partial Class Form1
         Me.D_START_DATETextBox = New System.Windows.Forms.TextBox()
         Me.btnUpdateCustomer = New System.Windows.Forms.Button()
         Me.U_LAST_RECEIPTTextBox = New System.Windows.Forms.TextBox()
+        Me.btnDeleteCustomer = New System.Windows.Forms.Button()
         U_USERLabel = New System.Windows.Forms.Label()
         T_FIRST_NAMELabel = New System.Windows.Forms.Label()
         T_LAST_NAMELabel = New System.Windows.Forms.Label()
@@ -121,7 +122,7 @@ Partial Class Form1
         '
         'btnAddCustomer
         '
-        Me.btnAddCustomer.Location = New System.Drawing.Point(311, 404)
+        Me.btnAddCustomer.Location = New System.Drawing.Point(257, 409)
         Me.btnAddCustomer.Name = "btnAddCustomer"
         Me.btnAddCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnAddCustomer.TabIndex = 15
@@ -160,7 +161,7 @@ Partial Class Form1
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(207, 404)
+        Me.btnClear.Location = New System.Drawing.Point(153, 409)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(98, 23)
         Me.btnClear.TabIndex = 31
@@ -217,7 +218,7 @@ Partial Class Form1
         '
         'btnUpdateCustomer
         '
-        Me.btnUpdateCustomer.Location = New System.Drawing.Point(415, 404)
+        Me.btnUpdateCustomer.Location = New System.Drawing.Point(361, 409)
         Me.btnUpdateCustomer.Name = "btnUpdateCustomer"
         Me.btnUpdateCustomer.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdateCustomer.TabIndex = 39
@@ -231,11 +232,21 @@ Partial Class Form1
         Me.U_LAST_RECEIPTTextBox.Size = New System.Drawing.Size(100, 20)
         Me.U_LAST_RECEIPTTextBox.TabIndex = 36
         '
+        'btnDeleteCustomer
+        '
+        Me.btnDeleteCustomer.Location = New System.Drawing.Point(465, 409)
+        Me.btnDeleteCustomer.Name = "btnDeleteCustomer"
+        Me.btnDeleteCustomer.Size = New System.Drawing.Size(98, 23)
+        Me.btnDeleteCustomer.TabIndex = 40
+        Me.btnDeleteCustomer.Text = "Delete Customer"
+        Me.btnDeleteCustomer.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(609, 471)
+        Me.Controls.Add(Me.btnDeleteCustomer)
         Me.Controls.Add(Me.btnUpdateCustomer)
         Me.Controls.Add(Me.D_START_DATETextBox)
         Me.Controls.Add(Me.D_LAST_PURCHASEDTextBox)
@@ -277,5 +288,6 @@ Partial Class Form1
     Friend WithEvents D_START_DATETextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnUpdateCustomer As System.Windows.Forms.Button
     Friend WithEvents U_LAST_RECEIPTTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents btnDeleteCustomer As System.Windows.Forms.Button
 
 End Class

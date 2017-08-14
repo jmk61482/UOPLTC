@@ -129,4 +129,12 @@ Public Class Form1
         CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
         ListBox1.SelectedIndex = -1
     End Sub
+
+    Private Sub btnDeleteCustomer_Click(sender As Object, e As EventArgs) Handles btnDeleteCustomer.Click
+        CRMDATATableAdapter.DeleteUser(U_USERTextBox.Text)
+
+        ClearFields()
+        CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
+        ListBox1.SelectedIndex = -1
+    End Sub
 End Class
