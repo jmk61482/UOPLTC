@@ -3,6 +3,8 @@
 Public Class Form1
 
     Private Const DateFormat As String = "{0:MM/dd/yyyy}"
+    Private Const DefaultIndex As Integer = -1
+    Private Const Comma As String = ", "
 
     ''' <summary>
     ''' Execute code upon button click
@@ -27,7 +29,7 @@ Public Class Form1
     ''' <remarks></remarks>
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CRMDATATableAdapter.Fill(Me.CRMDataSet.CRMDATA)
-        ListBox1.SelectedIndex = -1
+        ListBox1.SelectedIndex = DefaultIndex
         PreFillFields()
 
     End Sub
@@ -50,7 +52,7 @@ Public Class Form1
     ''' <remarks></remarks>
     Private Sub AddCustomer()
 
-        Dim fullName As String = T_LAST_NAMETextBox.Text + ", " + T_FIRST_NAMETextBox.Text
+        Dim fullName As String = T_LAST_NAMETextBox.Text + Comma + T_FIRST_NAMETextBox.Text
 
         CRMDATATableAdapter.Insert(
                      T_FIRST_NAMETextBox.Text,
@@ -63,7 +65,7 @@ Public Class Form1
 
         ClearFields()
         CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
-        ListBox1.SelectedIndex = -1
+        ListBox1.SelectedIndex = DefaultIndex
 
     End Sub
 
@@ -76,7 +78,7 @@ Public Class Form1
         T_FIRST_NAMETextBox.Text = String.Empty
         T_LAST_NAMETextBox.Text = String.Empty
         U_LAST_RECEIPTTextBox.Text = String.Empty
-        T_PAY_METHTextBox.SelectedIndex = -1
+        T_PAY_METHTextBox.SelectedIndex = DefaultIndex
 
         PreFillFields()
 
@@ -112,8 +114,14 @@ Public Class Form1
         End If
     End Sub
 
+    ''' <summary>
+    ''' Button for updating the customer information
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnUpdateCustomer_Click(sender As Object, e As EventArgs) Handles btnUpdateCustomer.Click
-        Dim fullName As String = T_LAST_NAMETextBox.Text + ", " + T_FIRST_NAMETextBox.Text
+        Dim fullName As String = T_LAST_NAMETextBox.Text + Comma + T_FIRST_NAMETextBox.Text
 
         CRMDATATableAdapter.UpdateUser(
                      T_FIRST_NAMETextBox.Text,
@@ -127,14 +135,20 @@ Public Class Form1
 
         ClearFields()
         CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
-        ListBox1.SelectedIndex = -1
+        ListBox1.SelectedIndex = DefaultIndex
     End Sub
 
+    ''' <summary>
+    ''' Button to delete the currently selected user from the database
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnDeleteCustomer_Click(sender As Object, e As EventArgs) Handles btnDeleteCustomer.Click
         CRMDATATableAdapter.DeleteUser(U_USERTextBox.Text)
 
         ClearFields()
         CRMDATATableAdapter.Fill(CRMDataSet.CRMDATA)
-        ListBox1.SelectedIndex = -1
+        ListBox1.SelectedIndex = DefaultIndex
     End Sub
 End Class
